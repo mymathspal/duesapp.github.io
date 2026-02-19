@@ -8,6 +8,7 @@ body{
     border: 2px solid black;
     font-family: Arial, Helvetica, sans-serif;
     transition: 1.5s;
+    background-color: #aeaeae;
 }
 
 nav{
@@ -22,7 +23,7 @@ nav{
     width: 10rem;
 }
 
-.userProfileSection{
+/* .userProfileSection{
     font-weight: 800;
     font-size: 1.5rem;
     float: right;
@@ -35,7 +36,7 @@ nav{
     border-radius: 50%;
     cursor: pointer;
     border: 2px solid black;
-}
+} */
 
 .editMode{
     display: flex;
@@ -56,6 +57,8 @@ nav{
     border-radius: 15px;
     background-color: rgb(171, 166, 166);
     transition: 1s;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 2px black;
 }
 
 
@@ -84,10 +87,83 @@ nav{
 }
 
 body:has(.switch-checkbox:checked){
-    background-color: #303131;
-    color: #fff;
+    background-color: #000000;
+    color: #d2d2d2;
 }
-.previewBox{
+
+.sectionTitle{
+    padding: 15px;
+    margin: 15px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #3f41a5;
+}
+
+.overviewContainer{
+    border-radius: 15px;
+    background-color: #767676;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding: 1.2rem;
+    margin: 1.5rem;
+    gap: 1.2rem;
+}
+
+.totalAmount, .numberOfMembers{
+   box-shadow: 5px 5px 5px 2px red;
+    display: grid;
+    grid-template-rows: 1fr;
+    padding: 26px;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: rgb(3, 3, 3);
+}
+
+.number{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #00b427;
+}
+
+.overviewText{
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #6d6d6d;
+}
+
+.actionBtnSection{
+    display: grid;
+    justify-self: stretch;
+    padding: 25px;
+    margin: 25px;
+    grid-template-rows: 1fr;
+    gap: 8px;
+     background-color: #5a5a5a;
+    border-radius: 10px;
+    
+}
+
+.actionBtn{
+    font-size: 1.15rem;
+    padding: 18px;
+    font-weight: 600;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    transition: 0.5s;
+    border: none;
+}
+
+.actionBtn:hover{
+    background-color: #242424;
+    transform: scale(1.01);
+    box-shadow: 2px 2px 2px #00b427;
+}
+
+
+
+/* .previewBox{
     width: 100%;
     height: 100%;
     border: 2px solid red;
@@ -103,7 +179,6 @@ body:has(.switch-checkbox:checked){
     height: 90vh;
    justify-content: center;
 text-align: center;
-   /* text-align: center; */
 }
 
 .previewEditBtn{
@@ -136,9 +211,9 @@ text-align: center;
      background-color: #000;
      color: #fff;
      cursor: pointer;
-}
+} */
 
 footer{
-    height: 100px;
-    background-color: #000;
+    height: 40px;
+    background-color: #303030;
 }
