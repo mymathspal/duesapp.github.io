@@ -9,7 +9,7 @@
     <link rel = "icon" type="image/svg" href="assets/logo.svg">
 </head>
 
-<body>
+<body class="pageBodies">
 
      <nav>
         <div role="navigation bar" aria-label="Homepage navigation bar" class="Nav">
@@ -20,7 +20,20 @@
 
     <div class="recordsActions">
         <input type="text" class="searchMember" id="searchMember" placeholder="Search Member">
-        <input type="submit" value="Add Member" id="recAddMember" class="recAddMember">
+        <input type="submit" value="Add Member" id="recAddMember" class="recAddMember addMemberBtn">
+
+        
+        <dialog class="addMemberModal">
+            <form class="addMemberForm" method="post">
+                <label for="name"><input type="text" placeholder="Joe White" id="name" name="name" required autocomplete="off"></label>
+                <label for="amount"><input type="number" id="amount" name="amount"></label>
+                <div class="modalActions">
+                <button class="modalCancel">Cancel</button>
+                <input type="submit" value="Add" class="modalAddMember">
+                </div>
+            </form>
+        </dialog>
+        
     </div>
 
     <div class="tableWrapper">
@@ -48,8 +61,8 @@ while (count <= 20) {
             <td>Nana Kwame Abeyie</td>
             <td>£20.00</td>
             <td>
-                <a><img src="assets/edit.svg" class="icon editIcon"></a>
-                <a><img src="assets/delete.svg" class="icon deleteIcon"></a>
+                <a><img src="assets/edit.svg" class="icon editIcon" title="Edit"></a>
+                <a><img src="assets/delete.svg" class="icon deleteIcon" title="Delete"></a>
             </td>
         </tr>
     `;
@@ -59,15 +72,21 @@ while (count <= 20) {
 tbody.innerHTML = rows;
         </script>
 </tbody>
-
-
 </table>
-
 </div>
+
+<div class="loadMoreBox">
+    <input type="submit" value = "Load More Members" class="loadMoreBtn">
+</div>
+
+
     <footer>
         
     </footer>
 
+
+
+ <script src="assets/scripts.js"></script>
 
 </body>
 

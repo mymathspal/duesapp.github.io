@@ -131,7 +131,7 @@ body:has(.switch-checkbox:checked){
     
 }
 
-.actionBtn,.recAddMember{
+.actionBtn,.recAddMember, .loadMoreBtn{
     font-size: 1.15rem;
     padding: 18px;
     font-weight: 600;
@@ -142,7 +142,7 @@ body:has(.switch-checkbox:checked){
     border: none;
 }
 
-.actionBtn:hover{
+.actionBtn:hover, .loadMoreBtn:hover{
     background-color: #242424;
     transform: scale(1.01);
     box-shadow: 2px 2px 2px #00b427;
@@ -187,10 +187,12 @@ footer{
 
 .searchMember:focus{
    outline: 2px solid red;
+   background-color: #fff;
 }
 
 .tableWrapper{
     overflow-x: scroll;
+    scrollbar-width: none;
 }
 
 .recordsTable{
@@ -201,7 +203,7 @@ footer{
 }
 
 th,td{
-    border: 0.5px solid #7d7d7d;
+    border: 0.2px solid #7d7d7d;
     text-align: center;
     padding: 10px;
 }
@@ -224,10 +226,43 @@ tr:nth-child(even){
 
 .icon{
     width: 2rem;
+    margin: 10px 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #000;
+    background-color: #000;
+    border-radius: 10px;
+
 }
 
-/* change it later by using classes */
+.loadMoreBox{
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+}
 
+
+/* modal styles */
+
+.addMemberModal{
+    /* background-color: #000; */
+    border: none;
+    border-radius: 5px;
+    width: 40vw;
+}
+
+.addMemberModal::backdrop{
+    backdrop-filter: blur(3px);
+}
+
+.addMemberForm{
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+    /* background-color: #000; */
+    margin: 15px;
+}
 
 
 
@@ -270,4 +305,7 @@ tr:nth-child(even){
         grid-template-columns: 1fr;
     }
 
+    .addMemberModal{
+    width: 80vw;
+}
 }

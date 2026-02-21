@@ -7,7 +7,7 @@
     <link rel = "icon" type="image/svg" href="assets/logo.svg">
     <title>HomePage</title>
 </head>
-<body>
+<body class="pageBodies">
 
     <nav>
         <div role="navigation bar" aria-label="Homepage navigation bar" class="Nav">
@@ -37,7 +37,20 @@
     <p class="sectionTitle">Quick Actions</p>
     <div class="actionBtnSection">
         <input type="submit" value="Add Member" id="addMemberBtn" class="addMemberBtn actionBtn">
+
+        <dialog class="addMemberModal">
+            <form class="addMemberForm" method="post">
+                <label for="name"><input type="text" placeholder="Joe White" id="name" name="name" autocomplete="off" required></label>
+                <label for="amount"><input type="number" id="amount" name="amount"></label>
+                <div class="modalActions">
+                <button class="modalCancel">Cancel</button>
+                <input type="submit" value="Add" class="modalAddMember">
+                </div>
+            </form>
+        </dialog>
+
         <input type="submit" value="Add Contribution" id="addContributionBtn" class="addContributionBtn actionBtn">
+
         <a href="records.html"><input type="submit" value="View Records" id="viewRecords" class="viewRecordsBtn actionBtn"></a>
 
     </div>
@@ -45,19 +58,6 @@
     <div>
         
     </div>
-
-<!-- 
-    <div class="previewBox" aria-label="preview section">
-       
-        <div src="embed.html" title="W3Schools Free Online Web Tutorials" class="embeddedWebsite">
-        </div>
-    </div>
-
-    <div class="preview">
-        <a href="embed.html" target="_blank">
-    <button class="previewBtn" id="previewBtn">PREVIEW</button>
-    </a>
-    </div> -->
 
 
     <footer>

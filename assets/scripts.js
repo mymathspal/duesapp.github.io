@@ -1,36 +1,25 @@
-// document.addEventListener("DOMContentLoaded", () => {
-
-// const previewButton = document.getElementById("previewBtn");
-// const editSwitch = document.getElementById("switch");
-// const editableContent = document.querySelectorAll(".editable");
-
+const addMemberBtns = document.querySelectorAll(".addMemberBtn");
+const addMemberModal = document.querySelector(".addMemberModal");
+const modalCancel = document.querySelector(".modalCancel");
+const modalAddMember = document.querySelector(".modalAddMember");
 
 
-// editSwitch.addEventListener("change", () =>{
-//     console.log(editableContent);
+
+addMemberBtns.forEach((addMemberBtn) =>{
+addMemberBtn.addEventListener("click", () =>{
+    console.log("new menber added!!");
+    addMemberModal.showModal();
     
-//     editableContent.forEach((element) =>{
-//     element.addAttribute("contenteditable");
-//     });
-  
+})
+})
 
-// });
+modalCancel.addEventListener("click", ()=>{
+    addMemberModal.close();
+})
 
-
-// });
-
-
-// const upload = document.getElementById("imageUpload");
-// const img = document.getElementById("profilePic");
-
-// upload.addEventListener("change", () => {
-//     const file = upload.files[0];
-//     img.src = URL.createObjectURL(file);
-// });
-
-
-
-
-
+modalAddMember.addEventListener("click", () =>{
+    addMemberModal.close();
+    alert("thank you!!");
+})
 
 
