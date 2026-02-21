@@ -161,18 +161,18 @@ footer{
     padding: 15px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 20px;
+    gap: 15px;
     background-color: #929191;
     border-radius: 10px;
     
 }
 
 .searchMember, .recAddMember{
-    padding: 10px;
+    padding: 8px;
 
 }
 
-.recAddMember, td input{
+.recAddMember{
     background-color: #01a525a0;
     color: #000000;
     box-shadow: 2px 2px 2px 2px #000;
@@ -180,7 +180,7 @@ footer{
     transition: 1s;
 }
 
-.recAddMember:hover, td input:hover{
+.recAddMember:hover{
     transform: scale(0.95);
     cursor: pointer;
 }
@@ -201,10 +201,12 @@ footer{
 }
 
 th,td{
-    border: 0.5px solid #dbdada;
+    border: 0.5px solid #7d7d7d;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
 }
+
+
 
 th{
     background-color: #000;
@@ -220,19 +222,13 @@ tr:nth-child(even){
     background-color: #929191;
 }
 
+.icon{
+    width: 2rem;
+}
+
 /* change it later by using classes */
-tr td input{
-    padding: 10px;
-    font-size: 1.1rem;
-    margin: 10px;
-    width: 120px;
-    font-weight: 500;
 
-}
 
-td input:nth-child(2){
-    background-color: red;
-}
 
 
 
