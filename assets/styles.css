@@ -25,21 +25,6 @@ nav{
     width: 10rem;
 }
 
-/* .userProfileSection{
-    font-weight: 800;
-    font-size: 1.5rem;
-    float: right;
-    justify-self: center;
-    background-color:red;
-    margin: 12px;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid black;
-} */
-
 .editMode{
     display: flex;
     border: 0.2px solid black;
@@ -98,7 +83,7 @@ body:has(.switch-checkbox:checked){
     margin: 15px;
     font-size: 1.35rem;
     font-weight: 700;
-    color: #3f41a5;
+    color: #00b427;
 }
 
 .overviewContainer{
@@ -146,13 +131,13 @@ body:has(.switch-checkbox:checked){
     
 }
 
-.actionBtn{
+.actionBtn,.recAddMember{
     font-size: 1.15rem;
     padding: 18px;
     font-weight: 600;
     width: 100%;
     background-color: #000000;
-    color: #fff;
+    color: #00b427;
     transition: 0.5s;
     border: none;
 }
@@ -163,62 +148,121 @@ body:has(.switch-checkbox:checked){
     box-shadow: 2px 2px 2px #00b427;
 }
 
-
-
-/* .previewBox{
-    width: 100%;
-    height: 100%;
-    border: 2px solid red;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
-}
-.embeddedWebsite{
-    position: relative;
-    width: 80%;
-    height: 90vh;
-   justify-content: center;
-text-align: center;
-}
-
-.previewEditBtn{
-    position: absolute;
-    z-index: 3;
-    padding: 10px;
-    margin: 10px;
-    left: 100px;
-    top: 250px;
-}
-
-.preview{
-    border: 2px solid black;
-    padding: 10px;
-    justify-content: center;
-    text-align: center;
-}
-
-.previewBtn{
-    padding: 10px;
-    width: 70%;
-    border: 2px solid #000;
-    background-color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: 0.5s;
-}
-
-.previewBtn:hover{
-     background-color: #000;
-     color: #fff;
-     cursor: pointer;
-} */
-
 footer{
     height: 40px;
     background-color: #303030;
 }
+
+
+/* Records page styling */
+.recordsActions{
+    /* border: 2px solid red; */
+    margin: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    background-color: #929191;
+    border-radius: 10px;
+}
+
+.searchMember, .recAddMember{
+    padding: 10px;
+
+}
+
+.recAddMember, td input{
+    background-color: #01a525a0;
+    color: #000000;
+    box-shadow: 2px 2px 2px 2px #000;
+    border-radius: 2px;
+    transition: 1s;
+}
+
+.recAddMember:hover, td input:hover{
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.searchMember:focus{
+   outline: 2px solid red;
+}
+
+
+.recordsTable{
+    border: 1.5px solid #606060;
+    width: 98%;
+    border-collapse: collapse;
+    margin: 10px;
+    overflow: scroll;
+}
+
+th,td{
+    border: 0.5px solid #dbdada;
+    text-align: center;
+    padding: 15px;
+}
+
+th{
+    background-color: #000;
+    color: #00b427;
+    font-size: 1.3rem;
+}
+
+td{
+    font-size: 1.12rem;
+}
+
+tr:nth-child(even){
+    background-color: #929191;
+}
+
+/* change it later by using classes */
+tr td input{
+    padding: 10px;
+    font-size: 1.1rem;
+    margin: 10px;
+    width: 120px;
+    font-weight: 500;
+
+}
+
+td input:nth-child(2){
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 768px) {
