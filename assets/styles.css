@@ -282,6 +282,7 @@ tr:nth-child(even){
     float: left;
     font-size: 1.15rem;
     font-weight: 600;
+    margin-left: 10px;
 }
 
 .modalCancelBtn, .modalAddMemberBtn{

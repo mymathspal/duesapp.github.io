@@ -21,7 +21,7 @@ modalAddMember.addEventListener("click", () =>{
    
     alert("thank you!!");
 
-     addMemberModal.remove();
+      addMemberModal.close();
 })
 
 
