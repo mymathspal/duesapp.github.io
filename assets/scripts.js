@@ -1,7 +1,7 @@
 const addMemberBtns = document.querySelectorAll(".addMemberBtn");
 const addMemberModal = document.querySelector(".addMemberModal");
-const modalCancel = document.querySelector(".modalCancel");
-const modalAddMember = document.querySelector(".modalAddMember");
+const modalCancel = document.querySelector(".modalCancelBtn");
+const modalAddMember = document.querySelector(".modalAddMemberBtn");
 
 
 
@@ -18,8 +18,10 @@ modalCancel.addEventListener("click", ()=>{
 })
 
 modalAddMember.addEventListener("click", () =>{
-    addMemberModal.close();
+   
     alert("thank you!!");
+
+     addMemberModal.remove();
 })
 
 

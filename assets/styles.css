@@ -83,7 +83,8 @@ body:has(.switch-checkbox:checked){
     margin: 15px;
     font-size: 1.35rem;
     font-weight: 700;
-    color: #00b427;
+    color: #fff;
+    
 }
 
 .overviewContainer{
@@ -180,7 +181,7 @@ footer{
     transition: 1s;
 }
 
-.recAddMember:hover{
+.recAddMember:hover, .modalCancelBtn:hover, .modalAddMemberBtn:hover {
     transform: scale(0.95);
     cursor: pointer;
 }
@@ -245,10 +246,11 @@ tr:nth-child(even){
 /* modal styles */
 
 .addMemberModal{
-    /* background-color: #000; */
+    background-color: #a3a3a3;
     border: none;
     border-radius: 5px;
     width: 40vw;
+   border: 1px solid #fff;
 }
 
 .addMemberModal::backdrop{
@@ -260,10 +262,46 @@ tr:nth-child(even){
     gap: 30px;
     justify-content: center;
     text-align: center;
-    /* background-color: #000; */
     margin: 15px;
+    /* border: 2px solid red; */
 }
 
+.formLabel{
+    /* border: 2px solid black; */
+    width: 300px;
+}
+
+.formLabel input{
+    margin: 10px;
+    padding: 15px;
+    width: 90%;
+    font-size: 1rem;
+}
+
+.formTitle{
+    float: left;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.modalCancelBtn, .modalAddMemberBtn{
+    padding: 15px 25px;
+    margin: 15px;
+    font-size: 1.1rem;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px #000;
+    transition: 0.5s;
+}
+
+.modalCancelBtn{
+    background-color: red;
+}
+
+.modalAddMemberBtn{
+    background-color: #00b427;
+}
 
 
 
