@@ -6,17 +6,18 @@
 body{
     margin: 0;
     padding: 0;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     font-family: Arial, Helvetica, sans-serif;
     transition: 1.5s;
     background-color: #aeaeae;
+    height: 100vh;
 }
 
 nav{
     margin: 0;
     padding: 0;
-    border: 2px solid black;
-    padding: 20px;
+    /* border: 2px solid black; */
+    padding: 25px;
     background-color: #555555;
 }
 
@@ -26,14 +27,15 @@ nav{
 }
 
 .editMode{
-    display: flex;
-    border: 0.2px solid black;
-    margin: 15px;
-    justify-content: right;
+    float: right;
+    /* border: 4px solid black; */
+    /* margin: 15px;
+
     padding: 5px;
     margin: 5px;
-    gap: 8px;
+    gap: 8px; */
 }
+
 
 .switch-container{
     position: relative;
@@ -75,8 +77,30 @@ nav{
 
 body:has(.switch-checkbox:checked){
     background-color: #000000;
-    color: #d2d2d2;
+    color: #b7b7b7;
 }
+
+.intro{
+    /* border: 2px solid rgb(255, 19, 19); */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #7b7b7ba0;
+    margin: 10px 0;
+}
+
+.nameIntro, .userRole{
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.orgName, .subIntro{
+    font-weight: 600;
+    color: #353535;
+}
+
+
 
 .sectionTitle{
     padding: 15px;
@@ -141,6 +165,7 @@ body:has(.switch-checkbox:checked){
     color: #00b427;
     transition: 0.5s;
     border: none;
+    border-radius: 8px;
 }
 
 .actionBtn:hover, .loadMoreBtn:hover{
@@ -152,6 +177,8 @@ body:has(.switch-checkbox:checked){
 footer{
     height: 40px;
     background-color: #303030;
+    margin: 0;
+    padding: 0;
 }
 
 
