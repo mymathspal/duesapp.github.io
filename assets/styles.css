@@ -371,7 +371,7 @@ tr:nth-child(even){
         grid-template-columns: 1fr;
     }
 
-    .addMemberModal{
+    .addMemberModal, .addContributionModal{
     width: 80vw;
 }
 }
