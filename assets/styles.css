@@ -181,6 +181,9 @@ footer{
     padding: 0;
 }
 
+input{
+    background-color: #fff;
+}
 
 /* Records page styling */
 .recordsActions{
