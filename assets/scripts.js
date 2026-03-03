@@ -10,7 +10,8 @@ const submitContributionBtn = document.querySelector(".submitContributionBtn");
 const memberNames = document.querySelectorAll(".memberName");
 const amountContributed = document.getElementById("amount");
 
-  const tbody = document.querySelector("tbody");
+const tbody = document.querySelector("tbody");
+const searchMemberInput = document.getElementById("searchMember");
 
 
 let count = 1;
@@ -19,8 +20,8 @@ let rows = "";
 while (count <= 20) {
     rows += `
         <tr>
-            <td>${count}</td>
-            <td>Nana Kwame Abeyie</td>
+            <td>${(count)}</td>
+            <td class="memberName">Nana Kwame Abeyie</td>
             <td>£20.00</td>
             <td>
                 <a><img src="assets/edit.svg" class="icon editIcon" title="Edit"></a>
@@ -63,7 +64,7 @@ modalAddMember.addEventListener("click", (event) =>{
 
         <tr>
             <td>${count}</td>
-            <td>${memberName.value}</td>
+            <td class="memberName">${memberName.value}</td>
             <td>£${amountContributed.value}</td>
             <td>
                 <a><img src="assets/edit.svg" class="icon editIcon" title="Edit"></a>
@@ -88,19 +89,19 @@ modalAddMember.addEventListener("click", (event) =>{
 
 
 
-addContributionBtn.addEventListener("click", () => {
-    addContributionModal.showModal();
-})
+// addContributionBtn.addEventListener("click", () => {
+//     addContributionModal.showModal();
+// })
 
 
-submitContributionBtn.addEventListener("click", (event) =>{
-    event.preventDefault();
-    // add it to the records 
-    // show added message
+// submitContributionBtn.addEventListener("click", (event) =>{
+//     event.preventDefault();
+//     // add it to the records 
+//     // show added message
 
 
-    addContributionModal.close();
-})
+//     addContributionModal.close();
+// })
 
 
 // function addMember(memberNames, amountContributed){
@@ -118,3 +119,31 @@ submitContributionBtn.addEventListener("click", (event) =>{
 //     })
     
 // }
+
+
+
+
+searchMemberInput.addEventListener("input", (event)=>{
+    const searchMemberInputValue = searchMemberInput.value.toLowerCase();
+    const memberTableRows = document.querySelectorAll("tbody tr");
+
+
+    memberTableRows.forEach((memberTableRow) =>{
+        const memberNameSearch = memberTableRow.querySelector(".memberName").textContent.toLowerCase();
+        if (memberNameSearch.includes(searchMemberInputValue)){
+            memberTableRow.style.display = "";
+        }
+        else{
+            memberTableRow.style.display = "none";
+          
+        }
+
+    })
+
+})
+
+
+
+
+
+
