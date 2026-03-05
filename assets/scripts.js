@@ -12,10 +12,48 @@ const amountContributed = document.getElementById("amount");
 
 const tbody = document.querySelector("tbody");
 const searchMemberInput = document.getElementById("searchMember");
+const contributeSearchMemberInput = document.querySelector(".contribSearchName")
+const memberNameSuggestBox = document.querySelector(".memberNameSuggestions");
 
+const members = ["kofi", "kwabena", "kwame", "kojo", "afia", "Yaw", "ama"];
 
 let count = 1;
 let rows = "";
+
+
+  addContributionBtn.addEventListener("click", () => {
+        addContributionModal.showModal();
+    })
+
+
+    submitContributionBtn.addEventListener("click", (event) =>{
+        event.preventDefault();
+        // add it to the records 
+        // show added message
+
+
+        addContributionModal.close();
+    })
+
+
+    contributeSearchMemberInput.addEventListener("input", () =>{
+        const searchValue = contributeSearchMemberInput.value.toLowerCase();
+         memberNameSuggestBox.innerHTML = "";
+         let limit = 0;
+         if (searchValue === "") return;
+        members.forEach((member)=>{
+          if(member.toLowerCase().includes(searchValue) && limit < 3){
+            const listItem = document.createElement("li");
+            listItem.textContent = member;
+            memberNameSuggestBox.appendChild(listItem);
+            limit++;
+          }
+        })
+    })
+
+
+
+
 
 while (count <= 20) {
     rows += `
@@ -89,19 +127,19 @@ modalAddMember.addEventListener("click", (event) =>{
 
 
 
-// addContributionBtn.addEventListener("click", () => {
-//     addContributionModal.showModal();
-// })
+    addContributionBtn.addEventListener("click", () => {
+        addContributionModal.showModal();
+    })
 
 
-// submitContributionBtn.addEventListener("click", (event) =>{
-//     event.preventDefault();
-//     // add it to the records 
-//     // show added message
+    submitContributionBtn.addEventListener("click", (event) =>{
+        event.preventDefault();
+        // add it to the records 
+        // show added message
 
 
-//     addContributionModal.close();
-// })
+        addContributionModal.close();
+    })
 
 
 // function addMember(memberNames, amountContributed){
@@ -143,7 +181,20 @@ searchMemberInput.addEventListener("input", (event)=>{
 })
 
 
-
+    contributeSearchMemberInput.addEventListener("input", () =>{
+        const searchValue = contributeSearchMemberInput.value.toLowerCase();
+         memberNameSuggestBox.innerHTML = "";
+         let limit = 0;
+         if (searchValue === "") return;
+        members.forEach((member)=>{
+          if(member.toLowerCase().includes(searchValue) && limit < 3){
+            const listItem = document.createElement("li");
+            listItem.textContent = member;
+            memberNameSuggestBox.appendChild(listItem);
+            limit++;
+          }
+        })
+    })
 
 
 

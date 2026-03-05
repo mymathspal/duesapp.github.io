@@ -70,7 +70,9 @@
 
          <dialog class="addContributionModal">
             <form class="addContributionForm">
-                <label for="name" class="formLabel"><p class="formTitle">Name</p><input type="text" placeholder="Search Name..." id="name" name="name" autocomplete="off" class = "" required></label>
+                <label for="name" class="formLabel"><p class="formTitle">Name</p><input type="text" placeholder="Search Name..." id="name" name="name" autocomplete="off" class = "contribSearchName" required>
+                    <ul class="memberNameSuggestions"></ul>
+                </label>
                 <label for="amount" class="formLabel"><p class="formTitle">Enter Amount (£): </p><input type="number" id="amount" name="amount" placeholder="£500" class=""></label>
                 <div class="modalActions">
                 <button class="modalCancelBtn">Cancel</button>
