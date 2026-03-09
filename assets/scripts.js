@@ -142,21 +142,6 @@ modalAddMember.addEventListener("click", (event) =>{
     })
 
 
-// function addMember(memberNames, amountContributed){
-
-//     memberNames.forEach((memberName) => {
-//     // console.log(memberName.value);
-
-//       if (memberName.value && amountContributed.value){
-//         console.log(`${memberName.value} contributed ${amountContributed.value}`);
-//       }
-
-//       else{
-//         console.log("nothing entered");
-//       }
-//     })
-    
-// }
 
 
 
